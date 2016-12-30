@@ -20,6 +20,7 @@ export default {
   name: 'chat',
   data: () => ({
     newMessage: '',
+    messages: [],
   }),
   meteor: {
     subscribe: {
