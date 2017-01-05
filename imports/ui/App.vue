@@ -1,6 +1,6 @@
 <template>
 <div class="app">
-  <h1>Simple Meteor example using Vue 2.0</h1>
+  <h1>Simple Meteor example using Vue 2.x</h1>
   <p>
     You pressed the button {{count}} time(s).
   </p>
