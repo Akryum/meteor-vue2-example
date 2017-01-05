@@ -2,18 +2,22 @@
 <div class="app">
   <h1>Simple Meteor example using Vue 2.0</h1>
   <p>
-    You pressed the button {{count}} times.
+    You pressed the button {{count}} time(s).
   </p>
   <my-button :label="buttonLabel" @click="addOne"></my-button>
   <p>
     Learn more about the vue integration <a href="https://github.com/Akryum/meteor-vue-component">on GitHub</a>.
   </p>
+  <test></test>
+  <test2></test2>
   <chat></chat>
 </div>
 </template>
 
 <script>
 import Chat from './Chat.vue';
+import Test from './Test.vue';
+
 import {Session} from 'meteor/session';
 
 Session.setDefault("counter", 0);
@@ -46,6 +50,7 @@ export default {
   },
   components: {
     Chat,
+    Test,
   },
 };
 </script>
