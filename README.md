@@ -1,13 +1,48 @@
 # meteor-vue2-example
 Meteor &amp; Vue 2.0 example
 
+To create a meteor + vue app:
+
 ```
-meteor npm install
+meteor remove blaze-html-templates jquery
+meteor add static-html akryum:vue-component
+meteor npm i -S babel-runtime vue vue-meteor-tracker vue-router
+meteor update
+meteor update --all-packages
+meteor npm i
 meteor
 ```
 
-If you create a new app with meteor and vue, don't forget to install vue 2 instead of vue 1:
+Want some less in `.vue` files?
 
 ```
-npm install --save vue@^2.1.8
+meteor add akryum:vue-less
+```
+
+Exists for sass, stylus, pug...
+
+App structure example:
+
+```
+src
+- client.js
+- index.html
+- server.js
+- imports
+  - client
+    - client.js
+    - components
+      - App.vue
+  - server
+    - server.js
+    - publications.js
+  - lib
+    - collections.js
+    - methods.js
+```
+
+ESLint?
+
+```
+meteor npm i -SD babel-eslint eslint eslint-config-standard eslint-plugin-html eslint-plugin-promise eslint-plugin-standard
 ```
