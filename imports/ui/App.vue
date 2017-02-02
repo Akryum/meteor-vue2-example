@@ -52,6 +52,9 @@ export default {
     Chat,
     Test,
   },
+  metaInfo: {
+    title: 'Meteor + Vue',
+  },
 };
 </script>
 
