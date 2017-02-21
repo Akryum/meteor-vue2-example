@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 .button {
   display: inline-block;
   background-color: #40b883;
