@@ -1,6 +1,10 @@
 <template>
 <div class="app">
   <h1>Simple Meteor example using Vue 2.x</h1>
+  <div v-blaze="'loginButtons'"></div>
+  <p v-if="user">
+    You are logged in as <b>{{ user.username }}</b>.
+  </p>
   <p>
     You pressed the button {{count}} time(s).
   </p>
@@ -32,14 +36,18 @@ export default {
   data() {
     return {
       buttonLabel: 'Click me!',
-      count: 0
+      count: 0,
+      user: null,
     }
   },
   meteor: {
     data: {
-      count() {
+      count () {
         return Session.get('counter');
-      }
+      },
+      user () {
+        return Meteor.user()
+      },
     }
   },
   methods: {
