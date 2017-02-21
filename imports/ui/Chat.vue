@@ -16,12 +16,7 @@
 </template>
 
 <script>
-export default {
-  name: 'chat',
-  data: () => ({
-    newMessage: '',
-    messages: [],
-  }),
+const test = {
   meteor: {
     subscribe: {
       'messages': [],
@@ -29,6 +24,24 @@ export default {
     messages() {
       return Messages.find({}, {
         sort: { date: -1 },
+      });
+    },
+  },
+}
+
+export default {
+  name: 'chat',
+  mixins: [test],
+  data () {
+    return {
+      newMessage: '',
+      messages: [],
+    }
+  },
+  meteor: {
+    messages() {
+      return Messages.find({}, {
+        sort: { date: 1 },
       });
     },
   },
