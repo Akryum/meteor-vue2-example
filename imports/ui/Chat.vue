@@ -18,7 +18,7 @@
 <script>
 const test = {
   meteor: {
-    subscribe: {
+    '$subscribe': {
       'messages': [],
     },
     messages() {
