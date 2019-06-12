@@ -7,7 +7,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.5",
     "bcrypt": "^3.0.6",
-    "meteor-node-stubs": "~0.2.0",
+    "meteor-node-stubs": "^0.4.1",
     "vue": "^2.1.10",
     "vue-meta": "^0.5.3",
     "vue-meteor-tracker": "^1.0.3"
